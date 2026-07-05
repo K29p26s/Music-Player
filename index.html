@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT PLAYLIST -->
+        <div class="sidebar">
+            <h2>🎵 Playlist</h2>
+            <!-- 🔍 SEARCH BAR -->
+    <input 
+        type="text" 
+        id="search" 
+        placeholder="Search song..." 
+        onkeyup="searchSongs()"
+        class="search-box"
+    >
+            <ul id="playlist">
+                <li onclick="playSelectedSong(0)">A Thousand Years</li>
+                <li onclick="playSelectedSong(1)">I think they call this love</li>
+                <li onclick="playSelectedSong(2)">Until I found You</li>
+                <li onclick="playSelectedSong(3)">Co2</li>
+                <li onclick="playSelectedSong(4)">Night Changes</li>
+                <li onclick="playSelectedSong(5)">Blue</li>
+                <li onclick="playSelectedSong(6)">Die with smile</li>
+                <li onclick="playSelectedSong(7)">Perfect</li>
+                <li onclick="playSelectedSong(8)">Cinnamon Girl</li>
+                <li onclick="playSelectedSong(9)">Lover</li>
+                <li onclick="playSelectedSong(10)">Summertime Sadness</li>
+            </ul>
+        </div>
+
+        <!-- MAIN PLAYER -->
+        <div class="player">
+
+            <!-- ✅ IMPORTANT CHANGE -->
+            <img id="cover" src="" class="cover">
+
+            <h1 id="title">Song Name</h1>
+            <p id="artist">Artist</p>
+
+            <audio id="audio"></audio>
+
+            <!-- Progress -->
+            <div class="progress-container">
+                <span id="current">0:00</span>
+                <input type="range" id="progress">
+                <span id="duration">0:00</span>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button onclick="prevSong()">⏮</button>
+
+                <!-- ✅ SINGLE TOGGLE BUTTON -->
+                <button onclick="togglePlay()" id="playBtn" class="play">▶</button>
+
+                <button onclick="nextSong()">⏭</button>
+            </div>
+
+
+            <!-- Volume -->
+            <div class="volume">
+                🔊 <input type="range" id="volume" min="0" max="1" step="0.1">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

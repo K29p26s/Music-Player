@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: #eaeaf0;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #8ab4f8;
+}
+
+/* 🔍 Search Box */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 15px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.06);
+  color: #eaeaf0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.search-box::placeholder {
+  color: #b0b3c6;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 10px rgba(138,180,248,0.6);
+  background: rgba(255,255,255,0.1);
+}
+
+/* Playlist */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin: 10px 0;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s, opacity 0.3s;
+}
+
+.sidebar li:hover {
+  background: rgba(138,180,248,0.2);
+  transform: translateX(5px);
+}
+
+/* 🎵 Active Song Highlight */
+.sidebar li.active {
+  background: rgba(138,180,248,0.3);
+  border: 1px solid #8ab4f8;
+}
+
+/* Player */
+.player {
+  flex: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Album cover */
+.cover {
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(138,180,248,0.4);
+  transition: 0.4s;
+}
+
+.cover:hover {
+  transform: scale(1.05);
+}
+
+/* Text */
+h1 {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+p {
+  color: #b0b3c6;
+}
+
+/* Progress */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+input[type="range"] {
+  flex: 1;
+  accent-color: #8ab4f8;
+  cursor: pointer;
+}
+
+/* Controls */
+.controls button {
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255,255,255,0.08);
+  color: #eaeaf0;
+  box-shadow: 0 0 10px rgba(138,180,248,0.3);
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.15);
+  background: rgba(138,180,248,0.2);
+}
+
+/* Big Play Button */
+.play {
+  font-size: 26px;
+  padding: 20px;
+  background: linear-gradient(135deg, #6c8cff, #8ab4f8);
+  box-shadow: 0 0 20px rgba(138,180,248,0.6);
+}
+
+/* Volume */
+.volume {
+  margin-top: 20px;
+}
+
+/* Scrollbar (bonus styling 🔥) */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(138,180,248,0.4);
+  border-radius: 10px;
+}
